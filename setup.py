@@ -92,7 +92,7 @@ def find_skeleton():
         image,
         results.pose_landmarks,
         mp_holistic.POSE_CONNECTIONS,
-        landmark_drawing_spec=None
+        landmark_drawing_spec=None,
         .get_default_pose_landmarks_style())
     mp_drawing.draw_landmarks(
         image, 
