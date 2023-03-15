@@ -42,6 +42,6 @@ def find_skeleton():
         .get_default_pose_landmarks_style())
     # Create real-time display window
     #cv2.imshow('MediaPipe Holistic', cv2.flip(image, 1))
-    cv2_imshow(cv2.flip(image, 1))
+    cv2_imshow(image)
 
     cap.release()
