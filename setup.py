@@ -53,6 +53,7 @@ from google.colab.patches import cv2_imshow
 
 # Renaming some mediapipe functionalities to short-hand form:
 mp_drawing = mp.solutions.drawing_utils
+drawing_spec = mp_drawing.DrawingSpec(thickness = 2, circle_radius = 2)
 mp_drawing_styles = mp.solutions.drawing_styles
 mp_holistic = mp.solutions.holistic
 
@@ -85,7 +86,7 @@ def find_skeleton():
         image,
         results.face_landmarks,
         mp_holistic.FACEMESH_CONTOURS,
-        landmark_drawing_spec=None,
+        landmark_drawing_spec=drawing_spec,
         connection_drawing_spec=mp_drawing_styles
         .get_default_face_mesh_contours_style())
     mp_drawing.draw_landmarks(
@@ -94,6 +95,18 @@ def find_skeleton():
         mp_holistic.POSE_CONNECTIONS,
         landmark_drawing_spec=mp_drawing_styles
         .get_default_pose_landmarks_style())
+    mp_drawing.draw_landmarks(
+        image, 
+        results.left_hand_landmarks, 
+        mp_holistic.HAND_CONNECTIONS, 
+        landmark_drawing_spec=drawing_spec, 
+        .get_default_pose_landmarks_style()
+    mp_drawing.draw_landmarks(
+        frame, results.right_hand_landmarks, 
+        mp_holistic.HAND_CONNECTIONS, 
+        landmark_drawing_spec=drawing_spec,
+        .get_default_pose_landmarks_style())
+
 
     # Show the image in the web browser:
     cv2_imshow(image)
