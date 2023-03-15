@@ -1,3 +1,11 @@
+#################### This code enables our Github repository to integrate with Google Colab:
+import sys, os
+
+def add_files:
+  sys.path.append(os.path.join('/content','MP_GoogleColab'))
+  
+  
+
 #################### This code enables webcams in Google Colab:
 
 # Import bncessary plug-ins:
