@@ -99,13 +99,11 @@ def find_skeleton():
         image, 
         results.left_hand_landmarks, 
         mp_holistic.HAND_CONNECTIONS, 
-        landmark_drawing_spec=drawing_spec, 
-        .get_default_pose_landmarks_style()
+        landmark_drawing_spec=drawing_spec)
     mp_drawing.draw_landmarks(
         frame, results.right_hand_landmarks, 
         mp_holistic.HAND_CONNECTIONS, 
-        landmark_drawing_spec=drawing_spec,
-        .get_default_pose_landmarks_style())
+        landmark_drawing_spec=drawing_spec)
 
 
     # Show the image in the web browser:
