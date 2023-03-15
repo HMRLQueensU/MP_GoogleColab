@@ -63,7 +63,7 @@ def find_skeleton():
   cap = cv2.VideoCapture('photo.jpg')
   width, height  = cap.get(3), cap.get(4)
 
-  # Use mediapipe 'holistic' pipeline to process the image:
+  # Use mediapipe pipeline to process the image:
   with mp_holistic.Holistic(
     min_detection_confidence=0.5,
     min_tracking_confidence=0.5) as holistic:
