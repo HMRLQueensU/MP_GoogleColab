@@ -53,7 +53,7 @@ from google.colab.patches import cv2_imshow
 
 # Renaming some mediapipe functionalities to short-hand form:
 mp_drawing = mp.solutions.drawing_utils
-drawing_spec = mp_drawing.DrawingSpec(thickness = 2, circle_radius = 2)
+drawing_spec = mp_drawing.DrawingSpec(thickness = 5, circle_radius = 0.5)
 mp_drawing_styles = mp.solutions.drawing_styles
 mp_holistic = mp.solutions.holistic
 
