@@ -6,8 +6,8 @@ import cv2
 from google.colab.patches import cv2_imshow
 
 mp_drawing = mp.solutions.drawing_utils
-mp_pose = mp.solutions.pose
-pose = mp_pose.Pose()
+mp_drawing_styles = mp.solutions.drawing_styles
+mp_holistic = mp.solutions.holistic
 
 def capture_image(filename='photo.jpg', quality=0.8):
   js = Javascript('''
