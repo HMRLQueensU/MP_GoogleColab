@@ -92,19 +92,8 @@ def find_skeleton():
         image,
         results.pose_landmarks,
         mp_holistic.POSE_CONNECTIONS,
-        landmark_drawing_spec=None,
-        connection_drawing_spec=mp_drawing_styles
+        landmark_drawing_spec=mp_drawing_styles
         .get_default_pose_landmarks_style())
-    mp_drawing.draw_landmarks(
-        image, 
-        results.left_hand_landmarks, 
-        mp_holistic.HAND_CONNECTIONS, 
-        landmark_drawing_spec=None)
-    mp_drawing.draw_landmarks(
-        image, results.right_hand_landmarks, 
-        mp_holistic.HAND_CONNECTIONS, 
-        landmark_drawing_spec=None)
-
 
     # Show the image in the web browser:
     cv2_imshow(image)
