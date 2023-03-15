@@ -101,7 +101,7 @@ def find_skeleton():
         mp_holistic.HAND_CONNECTIONS, 
         landmark_drawing_spec=drawing_spec)
     mp_drawing.draw_landmarks(
-        frame, results.right_hand_landmarks, 
+        image, results.right_hand_landmarks, 
         mp_holistic.HAND_CONNECTIONS, 
         landmark_drawing_spec=drawing_spec)
 
