@@ -5,6 +5,10 @@ import mediapipe as mp
 import cv2
 from google.colab.patches import cv2_imshow
 
+mp_drawing = mp.solutions.drawing_utils
+mp_pose = mp.solutions.pose
+pose = mp_pose.Pose()
+
 def capture_image(filename='photo.jpg', quality=0.8):
   js = Javascript('''
     async function takePhoto(quality) {
@@ -40,10 +44,6 @@ def capture_image(filename='photo.jpg', quality=0.8):
   return filename
 
 def find_skeleton():
-  mp_drawing = mp.solutions.drawing_utils
-  mp_pose = mp.solutions.pose
-  pose = mp_pose.Pose()
-  
   cap = cv2.VideoCapture('photo.jpg')
   width, height  = cap.get(3), cap.get(4)
 
