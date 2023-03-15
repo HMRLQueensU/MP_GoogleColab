@@ -1,7 +1,7 @@
 #################### This code enables our Github repository to integrate with Google Colab:
 import sys, os
 
-def add_files:
+def add_file:
   sys.path.append(os.path.join('/content','MP_GoogleColab'))
   
   
