@@ -39,13 +39,11 @@ def capture_image(filename='photo.jpg', quality=0.8):
     f.write(binary)
   return filename
 
-mp_drawing = mp.solutions.drawing_utils
-mp_pose = mp.solutions.pose
-pose = mp_pose.Pose()
-
-
-
 def find_skeleton():
+  mp_drawing = mp.solutions.drawing_utils
+  mp_pose = mp.solutions.pose
+  pose = mp_pose.Pose()
+  
   cap = cv2.VideoCapture('photo.jpg')
   width, height  = cap.get(3), cap.get(4)
 
